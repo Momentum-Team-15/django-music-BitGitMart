@@ -51,7 +51,7 @@ In your project directory, get a new Django project set up. Don't forget the `.`
 ```
 > pipenv install django
 > pipenv shell
-> django-admin startproject django_music .
+> django-admin startproject config .
 ```
 
 After you run this, your directory structure should look like this:
@@ -62,7 +62,7 @@ After you run this, your directory structure should look like this:
 ├── Pipfile
 ├── Pipfile.lock
 ├── README.md
-├── django_music
+├── config
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
@@ -73,7 +73,7 @@ After you run this, your directory structure should look like this:
 1 directory, 10 files
 ```
 
-To generate an app in your django_music project (so that you have something analogous to `contacts` in the Uptact assignment), you want to run the following (where <name_of_app> is a name you can choose) in your repo:
+To generate an app in your config project (so that you have something analogous to `contacts` in the Uptact assignment), you want to run the following (where <name_of_app> is a name you can choose) in your repo:
 
 `django-admin startapp <name_of_app>`
 
@@ -100,7 +100,7 @@ and your directory structure would look like:
 │   ├── models.py
 │   ├── tests.py
 │   └── views.py
-├── django_music
+├── config
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
