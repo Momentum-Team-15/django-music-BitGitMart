@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 django-extensions = "*"
 django-registration-redux = "*"
+music = "*"
+django-debug-toolbar = "*"
+django-environ = "*"
 
 [dev-packages]
 
