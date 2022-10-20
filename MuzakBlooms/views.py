@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from .models import Album 
 
 # Create your views here.
 def index(request): 
-    return render(request, 'MuzakBlooms/index.html')
+    albums = Album.objects.all() 
+    return render(request, 'MuzakBlooms/index.html', {'albums': albums})
+
+def album_detail(request):
+    albums = Album.objects.all() 
+    return render(request, 'MuzakBlooms/album_detail.html', {'albums': albums})
