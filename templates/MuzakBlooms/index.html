@@ -1,12 +1,11 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <h2>Welcome to ze homepage, we got boring board games</h2>
 <h3>below are ze albums for your listening pleasures:</h3>
 
-{% for album in albums %}
-<p><a href ="album_detail.html">{{ album.title }}</a>by {{ album.artist }}</p>
-{% endfor %}
+<a href="{% url 'create_album' %}">Add Album</a>
 
+{% for album in albums %}
+<p><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</a>by {{ album.artist }}</p>
+{% endfor %}
 {% endblock %}

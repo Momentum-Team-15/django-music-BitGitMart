@@ -18,8 +18,12 @@ from django.urls import path, include
 from MuzakBlooms import views 
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
     path('', views.index, name="home"), 
     path('__debug__/', include('debug_toolbar.urls')),
+    path('albums/<int:pk>', views.album_detail, name='album_detail'), 
+    path('album/new', views.create_album, name='create_album'),
+
 ]

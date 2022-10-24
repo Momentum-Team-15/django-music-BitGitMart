@@ -3,7 +3,12 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser 
 
 class User(AbstractUser): 
-    birthday = models.DateField(blank=True, null=True) 
+    pass 
+
+class Song(models.Model): 
+    name = models.CharField(max_length=200)
+    album = models.ForeignKey('Album', on_delete=models.CASCADE)
+    song_file = models.FileField(null=True, blank=True)
 
 class Album(models.Model): 
     title = models.CharField(max_length=200)
